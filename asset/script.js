@@ -10,20 +10,12 @@ Quando l'utente clicca su ogni cella, la cella cliccata si colora di azzurro ed 
 const eleGrid = document.querySelector('.griglia')
 const eleBtn = document.querySelector(".button")
 
-const eleDiff = document.querySelector("#difficoltà")
 
-
-
-
-eleBtn.addEventListener("click", function(facile){
-  
-    createGrid(100, eleGrid);
+eleBtn.addEventListener("click", function(){
     
+    createGrid(100, eleGrid);
+
 })
-
-
-
-
 
 
 function createGrid(numCells, eleGrid) {
@@ -44,8 +36,4 @@ function createGrid(numCells, eleGrid) {
 }
 
     
-
-
-
-
 
