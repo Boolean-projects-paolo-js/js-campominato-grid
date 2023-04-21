@@ -8,21 +8,44 @@ Quando l'utente clicca su ogni cella, la cella cliccata si colora di azzurro ed 
 
 
 const eleGrid = document.querySelector('.griglia')
+const eleBtn = document.querySelector(".button")
+
+const eleDiff = document.querySelector("#difficoltà")
 
 
-for (let i = 1; i <= 100; i++) {
-    eleGrid.innerHTML = eleGrid.innerHTML + `<div class="cell">${i}</div>`;
-    console.log(i);
+
+
+eleBtn.addEventListener("click", function(facile){
+  
+    createGrid(100, eleGrid);
+    
+})
+
+
+
+
+
+
+function createGrid(numCells, eleGrid) {
+    eleGrid.innerHTML = ''
+
+	for (let i = 1; i < numCells + 1; i++) {
+		eleGrid.innerHTML += `<div class="cell">${i}</div>`;
+	}
+
+    const listCells = document.querySelectorAll('.cell');
+	
+    for (let i = 1; i < listCells.length; i++) {
+        const cell = listCells[i];
+        cell.addEventListener('click', function(){
+            this.classList.toggle('clicked');
+        });
+    }
 }
 
-const listCells = document.querySelectorAll('.cell');
+    
 
-for (let i = 1; i < listCells.length; i++) {
-	const cell = listCells[i];
-	cell.addEventListener('click',
-		function colorCell() {
-			console.log(this);
-			this.classList.toggle('clicked');
-		}
-	);
-}
+
+
+
+
