@@ -7,13 +7,31 @@ Quando l'utente clicca su ogni cella, la cella cliccata si colora di azzurro ed 
 */
 
 
-const eleGrid = document.querySelector('.griglia')
+
 const eleBtn = document.querySelector(".button")
 
 
 eleBtn.addEventListener("click", function(){
+    const eleGrid = document.querySelector('.griglia')
+    const eleDifficulty = document.getElementById("difficoltà");
+    let difficoltà = eleDifficulty.options[eleDifficulty.selectedIndex].value;
     
-    createGrid(100, eleGrid);
+    
+    if (difficoltà == "facile") {
+        eleGrid.classList.remove("facile", "media", "difficile");
+        eleGrid.classList.add("facile");
+        createGrid(49, eleGrid);
+
+    } else if (difficoltà == "media") {
+        eleGrid.classList.remove("facile", "media", "difficile");
+        eleGrid.classList.add("media");
+        createGrid(81, eleGrid);
+        
+    } else if (difficoltà == "difficile") {
+        eleGrid.classList.remove("facile", "media", "difficile");
+        eleGrid.classList.add("difficile");
+        createGrid(100, eleGrid);
+    }
 
 })
 

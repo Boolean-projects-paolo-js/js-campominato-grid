@@ -5,9 +5,11 @@
 }
 
 
+/***********Header - Selezionare Difficoltà*************/
+
 .testata{
     /* background-color: rgb(157, 127, 255); */
-    height: 6rem;
+    height: 10vh;
 }
 
 .t-container{
@@ -16,16 +18,15 @@
 }
 
 .logo{
-    height: 6rem;
+    height: 10vh;
 }
 
 
-
-
+/*******************Section - Tabella*******************/
 
 .sfondo{
     background-color: aquamarine;
-    /* height: 50vh; */
+    height: 85vh;
 }
 
 .container{
@@ -33,13 +34,31 @@
     /* padding: 5rem; */
 }
 
-.griglia{
+
+
+/*****Tipologia di tabella - Difficoltà selezionata*****/
+
+.facile{
+    height: 420px;
+    aspect-ratio: 1 / 1;
+    /* background-color: antiquewhite; */
+    padding-top: 15vh;
+}
+
+.media{
+    height:540px;
+    aspect-ratio: 1 / 1;
+    padding-top: 10vh;
+}
+
+.difficile{
     height: 600px;
     aspect-ratio: 1 / 1;
-    margin: auto; 
-    display: flex;
-    flex-wrap: wrap;
+    padding-top: 5vh;
 }
+
+
+/*************Caratteristiche cella tabella*************/
 
 .cell{
     display: flex;
@@ -52,21 +71,23 @@
     font-weight: 600;
     font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     cursor: pointer;
+    margin: 0;
 }
+
+
+/***********colore cella al click del mouse*************/
 
 .clicked{
     background-color: cornflowerblue;
 }
 
 
-
-
-
+/************************Footer*************************/
 
 .footer{
-    height: 4rem;
-    background-color: rgb(157, 127, 255);
-}
+    height: 5vh;
+    /* background-color: rgb(157, 127, 255);*/
+} 
 
 
 
